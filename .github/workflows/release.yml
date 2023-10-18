@@ -35,7 +35,7 @@ jobs:
 
     - name: Start pytest
       run: |
-        pytest test.py -v -cov --junitxml=report.xml
+        pytest test_calculator.py -v -cov --junitxml=report.xml
 
     - if: ${{ failure() }}
       uses: JasonEtco/create-an-issue@v2
