@@ -21,13 +21,13 @@ jobs:
     - name: Checkout Own Repo
       uses: actions/checkout@v2
       with:
-        repository: explicitworkload/helloworld-python
+        repository: angeljackal/helloworld-python
 
     - name: Get TestScript from Remote Repository
       env:
         TOKEN: ${{ secrets.GITHUB_TOKEN }} #secrets.repo_token
       run: |
-        curl -H "Authorization: token ${TOKEN}" https://raw.githubusercontent.com/explicitworkload/SFA_RUN2_GIT/main/test_helloworld.py -o testetst.py
+        curl -H "Authorization: token ${TOKEN}" https://raw.githubusercontent.com/angeljackal/helloworld-python/main/test_calculator.py -o test.py
   
     - name: List Content from Repo
       run: |
@@ -51,7 +51,7 @@ jobs:
           Workflow name - `${{ github.workflow }}`
           Job -           `${{ github.job }}`
           status -        `${{ job.status }}`
-          assignees: explicitworkload
+          assignees: angeljackal
     
     # - uses: JasonEtco/create-an-issue@v2
     #   env:
