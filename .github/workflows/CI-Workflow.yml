@@ -6,7 +6,9 @@ on:
     
 jobs:
   build:
-
+    #Add code line to permit write all
+    permissions: write-all
+    
     runs-on: ubuntu-latest
 
     steps:
